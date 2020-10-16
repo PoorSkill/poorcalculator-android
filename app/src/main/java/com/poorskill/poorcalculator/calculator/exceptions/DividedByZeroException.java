@@ -1,0 +1,55 @@
+/*
+ * The MIT License
+ * Copyright © 2020 Anton Kesy
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+package com.poorskill.poorcalculator.calculator.exceptions;
+
+/**
+ * Exception to catch divided by zero while using the calculator
+ * yeah ... could have used the ArithmeticException but wanted to create my own for the sake of learning
+ */
+public class DividedByZeroException extends CalculatorException {
+    /**
+     * Constructor without and params
+     */
+    public DividedByZeroException() {
+        super();
+    }
+
+    /**
+     * Constructor with String errorMessage param
+     *
+     * @param errorMessage error message
+     */
+    public DividedByZeroException(String errorMessage) {
+        super(errorMessage);
+    }
+
+    /**
+     * Constructor with String errorMessage and Throwable error parameter
+     *
+     * @param errorMessage error message
+     * @param err          throwable error
+     */
+    public DividedByZeroException(String errorMessage, Throwable err) {
+        super(errorMessage, err);
+    }
+}

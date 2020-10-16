@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculator_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.poorskill.poorcalculator.CalculatorActivity">
+
+
+    <LinearLayout
+        android:id="@+id/display_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@color/result_displayBlue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/formula"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:autoSizeMaxTextSize="@dimen/formula_max_text_size"
+            android:autoSizeMinTextSize="@dimen/formula_min_text_size"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-light"
+            android:gravity="end|center"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_vertical|end"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            tools:text="0" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/functionButtonLayout"
+                style="@style/FunctionButton">
+
+                <RelativeLayout
+                    android:id="@+id/btn_clear"
+                    style="@style/InnerButton">
+
+                    <TextView
+                        android:id="@+id/bigTextButton0"
+                        style="@style/MainTextButtonFunction"
+                        android:text="@string/clear" />
+
+                    <TextView
+                        android:id="@+id/smallTextButton0"
+                        style="@style/SmallTextButtonFunction"
+                        android:text="@string/ac" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorOperationBlue">
+
+
+                <LinearLayout
+                    android:id="@+id/operationButton_0"
+                    style="@style/OperationButton">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_pi"
+                        style="@style/InnerButton">
+
+                        <TextView
+                            android:id="@+id/bigTextButton1"
+                            style="@style/MainTextButtonFunction"
+                            android:text="@string/pi" />
+
+                        <TextView
+                            android:id="@+id/smallTextButton1"
+                            style="@style/SmallTextButtonFunction"
+                            android:text="@string/get_last" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorOperationBlue">
+
+                <LinearLayout
+                    android:id="@+id/operationButton_1"
+                    style="@style/OperationButton">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_e"
+                        style="@style/InnerButton">
+
+                        <TextView
+                            android:id="@+id/bigTextButton2"
+                            style="@style/MainTextButtonFunction"
+                            android:text="@string/e" />
+
+                        <TextView
+                            android:id="@+id/smallTextButton2"
+                            style="@style/SmallTextButtonFunction"
+                            android:text="@string/faculty" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorOperationBlue">
+
+                <LinearLayout
+                    android:id="@+id/operationButton_2"
+                    style="@style/OperationButton">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_divide"
+                        style="@style/InnerButton">
+
+                        <TextView
+                            android:id="@+id/bigTextButton3"
+                            style="@style/MainTextButtonFunction"
+                            android:text="@string/divide" />
+
+                        <TextView style="@style/SmallTextButtonFunction" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/sevenButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_7"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b7" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eightButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_8"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nineButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_9"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorOperationBlue">
+
+                <LinearLayout
+                    android:id="@+id/operationButton_3"
+                    style="@style/OperationButton">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_multiply"
+                        style="@style/InnerButton">
+
+                        <TextView
+                            android:id="@+id/bigTextButton4"
+                            style="@style/MainTextButtonFunction"
+                            android:text="@string/multiply" />
+
+                        <TextView style="@style/SmallTextButtonFunction" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/fourButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_4"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fiveButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_5"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sixButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_6"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorOperationBlue">
+
+
+                <LinearLayout
+                    android:id="@+id/operationButton_4"
+                    style="@style/OperationButton">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_subtract"
+                        style="@style/InnerButton">
+
+                        <TextView
+                            android:id="@+id/bigTextButton5"
+                            style="@style/MainTextButtonFunction"
+                            android:text="@string/minus" />
+
+                        <TextView style="@style/SmallTextButtonFunction" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/oneButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_1"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twoButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_2"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/threeButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_3"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorOperationBlue">
+
+                <LinearLayout
+                    android:id="@+id/operationButton_5"
+                    style="@style/OperationButton">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_plus"
+                        style="@style/InnerButton">
+
+                        <TextView
+                            android:id="@+id/bigTextButton6"
+                            style="@style/MainTextButtonFunction"
+                            android:text="@string/plus" />
+
+                        <TextView style="@style/SmallTextButtonFunction" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/decimalSeparatorButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_separator"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/comma" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/zeroButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_0"
+                    style="@style/DigitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/b0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bracketButtonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/btnColorNumberBlue">
+
+                <Button
+                    android:id="@+id/btn_bracket_left"
+                    style="@style/DigitButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/bracket_left"
+                    android:textAlignment="textEnd" />
+
+
+                <Button
+                    android:id="@+id/btn_bracket_right"
+                    style="@style/DigitButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/bracket_right"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/equalsButtonLayout"
+                style="@style/FunctionButton">
+
+                <RelativeLayout
+                    android:id="@+id/btn_equals"
+                    style="@style/InnerButton">
+
+                    <TextView
+                        android:id="@+id/btn_equals_text"
+                        style="@style/MainTextButtonFunction"
+                        android:text="@string/equals" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

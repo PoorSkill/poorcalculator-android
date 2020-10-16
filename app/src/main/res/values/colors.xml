@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btnColorNumberBlue">#4696EB</color>
+    <color name="btnColorOperationBlue">#8FBDEE</color>
+    <color name="btnEqualsBlue">#3775B8</color>
+    <color name="result_displayBlue">#40556B</color>
+    <color name="btnColorFunctionBlue">#3775B8</color>
+    <color name="normalColorBlue">#000000</color>
+    <color name="specialTextColorBlue">#FFFFFF</color>
+
+    <color name="btnEqualsDark">#000000</color>
+    <color name="result_displayDark">#000000</color>
+    <color name="btnColorFunctionDark">#000000</color>
+    <color name="btnColorOperationDark">#000000</color>
+    <color name="btnColorNumberDark">#000000</color>
+    <color name="normalTextColorBlack">#FFFFFF</color>
+    <color name="specialTextColorBlack">#FFFFFF</color>
+
+
+</resources>
